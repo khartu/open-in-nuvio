@@ -1,0 +1,166 @@
+/* Open in Nuvio — button styles for Letterboxd and IMDb. */
+
+/* ---------- shared ---------- */
+.nuvio-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-weight: 700;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.nuvio-btn .nuvio-logo {
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  display: block;
+  flex: 0 0 auto;
+}
+
+/* ---------- Letterboxd action panel ---------- */
+.nuvio-slot {
+  margin: 0 0 10px;
+}
+
+.nuvio-item {
+  list-style: none;
+  margin: 0 0 4px;
+  padding: 0;
+}
+
+.nuvio-btn--lb {
+  width: 100%;
+  padding: 12px 10px;
+  border-radius: 3px;
+  font: 700 11px/1.2 "GraphikWeb", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Fallbacks when the page has no sidebar panel to sample */
+.nuvio-btn--lb[data-nuvio-theme="dark"] {
+  background-color: #2c3440;
+  border: 1px solid #3d4a57;
+  color: #9ab;
+}
+
+.nuvio-btn--lb[data-nuvio-theme="light"] {
+  background-color: #ffffff;
+  border: 1px solid #d5dbe1;
+  color: #5a6673;
+}
+
+.nuvio-btn--lb:hover {
+  filter: brightness(1.12);
+}
+
+li.nuvio-item .nuvio-btn {
+  width: 100%;
+  padding: 9px 8px;
+  border-radius: 3px;
+  font: 700 11px/1.2 "GraphikWeb", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+li.nuvio-item .nuvio-btn[data-nuvio-theme="dark"] {
+  background-color: #1c2228;
+  border: 1px solid #303840;
+  color: #99aabb;
+}
+
+li.nuvio-item .nuvio-btn[data-nuvio-theme="dark"]:hover {
+  background-color: #26213a;
+  border-color: #7b52c8;
+  color: #c4aaff;
+}
+
+li.nuvio-item .nuvio-btn[data-nuvio-theme="light"] {
+  background-color: #ffffff;
+  border: 1px solid #d5dbe1;
+  color: #5a6673;
+}
+
+li.nuvio-item .nuvio-btn[data-nuvio-theme="light"]:hover {
+  background-color: #f5f1ff;
+  border-color: #7b52c8;
+  color: #5a3ba8;
+}
+
+/* ---------- IMDb hero row ---------- */
+a.nuvio-btn.nuvio-btn--imdb {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 40px;
+  padding: 0 16px;
+  margin-left: 8px;
+  border-radius: 8px;
+  font: 600 14px/1 "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  letter-spacing: 0.01em;
+  text-transform: none;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+/* When the anchor sits in a column (not a row of buttons) stack it full width
+   above the watchlist button, matching its pill shape. */
+a.nuvio-btn.nuvio-btn--imdb-stacked {
+  display: flex;
+  width: 100%;
+  margin: 0 0 8px;
+  padding: 0 16px;
+  justify-content: center;
+  box-sizing: border-box;
+  border-radius: 24px;
+}
+
+a.nuvio-btn--imdb[data-nuvio-theme="light"] {
+  background-color: #f5f5f5;
+  border: 1px solid #d5d5d5;
+  color: #0f0f0f;
+}
+
+a.nuvio-btn--imdb[data-nuvio-theme="light"]:hover {
+  background-color: #eee4ff;
+  border-color: #7b52c8;
+  color: #4b2fa0;
+}
+
+a.nuvio-btn--imdb[data-nuvio-theme="dark"] {
+  background-color: #1f1f1f;
+  border: 1px solid #444444;
+  color: #f5f5f5;
+}
+
+a.nuvio-btn--imdb[data-nuvio-theme="dark"]:hover {
+  background-color: #2a2340;
+  border-color: #7b52c8;
+  color: #c4aaff;
+}
+
+/* Last-resort fixed pill when the host page offers no usable anchor. */
+a.nuvio-btn.nuvio-btn--fallback {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 2147483000;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: #14161c;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: #f4f5f7;
+  font: 600 13px/1 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  text-transform: none;
+  width: auto;
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.4);
+}
+
+a.nuvio-btn.nuvio-btn--fallback:hover {
+  background: #1d2028;
+  filter: none;
+}

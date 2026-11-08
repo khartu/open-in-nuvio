@@ -1,0 +1,65 @@
+{
+  "manifest_version": 3,
+  "name": "Open in Nuvio",
+  "version": "1.11.0",
+  "description": "Adds an Open in Nuvio button to Letterboxd and IMDb title pages.",
+  "icons": {
+    "16": "icons/nuvio-mark.png",
+    "48": "icons/nuvio-mark.png",
+    "128": "icons/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://letterboxd.com/film/*",
+        "*://*.letterboxd.com/film/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "nuvio.css"
+      ],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": [
+        "*://*.imdb.com/title/*",
+        "*://*.imdb.com/*/title/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "nuvio.css"
+      ],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": [
+        "https://www.imdb.com/*",
+        "https://imdb.com/*",
+        "https://m.imdb.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "nuvio.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "icons/nuvio-mark.png"
+      ],
+      "matches": [
+        "*://letterboxd.com/*",
+        "*://*.letterboxd.com/*",
+        "*://*.imdb.com/*"
+      ]
+    }
+  ]
+}
