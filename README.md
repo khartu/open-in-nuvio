@@ -6,15 +6,9 @@ app with one click.
 
 ![Open in Nuvio in action: one click on a Letterboxd page opens the film in the Nuvio app](docs/demo.gif)
 
-For a smaller, sharper version, [watch the MP4](docs/demo.mp4) (275 KB).
-
 Nuvio already accepts deep links like `nuvio://meta?type=movie&id=tt0133093`, but nothing on a
 movie page can trigger one. This extension adds the button, in the same place the classic
 "open in Stremio" extensions put theirs.
-
-Static reference of both placements:
-
-![Open in Nuvio in Letterboxd's action panel and above IMDb's watchlist button](docs/screenshot-1280x800.png)
 
 ## What it does
 
