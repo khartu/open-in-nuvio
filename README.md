@@ -46,14 +46,18 @@ If it does nothing, refresh LaunchServices:
 /System/Library/Frameworks/CoreServices.framework/Frameworks/CoreServices.framework/Support/lsregister -f /Applications/Nuvio.app
 ```
 
-## Install (unpacked, for now)
+## Install
 
-1. Clone this repo.
-2. Open `chrome://extensions` and enable **Developer mode**.
-3. **Load unpacked** → pick the repo folder.
-4. Visit a Letterboxd or IMDb title page.
+**[Download the latest release](https://github.com/khartu/open-in-nuvio/releases/latest)** and unzip it
+anywhere permanent, then:
+
+1. Open `chrome://extensions` and enable **Developer mode**.
+2. **Load unpacked** → pick the unzipped folder (the one containing `manifest.json`).
+3. Visit a Letterboxd or IMDb title page.
 
 The first click triggers Chrome's "Open Nuvio?" prompt — tick **Always allow**.
+
+To hack on it instead, clone the repo and load the repo folder the same way.
 
 Firefox: `about:debugging` → This Firefox → Load Temporary Add-on → `manifest.json`.
 
